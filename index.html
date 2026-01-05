@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is Mr.Mythic_Killer?</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #02040a;
+            color: #bde0ff;
+            font-family: 'Consolas', monospace;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* INTRO TEXT ANIMATION */
+        .intro-text {
+            margin-top: 120px;
+            font-size: 3rem;
+            color: #4db8ff;
+            opacity: 0;
+            animation: fadeIn 2.5s forwards, glow 2s infinite alternate;
+            text-shadow: 0 0 10px #4db8ff;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #4db8ff; }
+            to   { text-shadow: 0 0 25px #009dff; }
+        }
+
+        /* BUTTON */
+        .btn {
+            margin-top: 40px;
+            padding: 15px 40px;
+            border: 2px solid #1a78ff;
+            background: transparent;
+            color: #4db8ff;
+            font-size: 1.3rem;
+            border-radius: 8px;
+            cursor: pointer;
+            opacity: 0;
+            animation: btnFade 3s forwards;
+            transition: 0.3s;
+            text-shadow: 0 0 12px #008cff;
+        }
+
+        @keyframes btnFade {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .btn:hover {
+            background: rgba(0, 70, 130, 0.4);
+            box-shadow: 0 0 12px #008cff;
+        }
+
+        /* DETAILS SECTION HIDDEN BY DEFAULT */
+        #details {
+            display: none;
+            margin-top: 50px;
+            animation: slideUp 0.7s forwards;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* NEON CARDS */
+        .card {
+            margin: 25px auto;
+            width: 85%;
+            max-width: 650px;
+            padding: 25px;
+            background: rgba(0, 20, 50, 0.35);
+            border: 1px solid #1a78ff;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 25px #003a70;
+        }
+
+        .title {
+            color: #58c1ff;
+            font-size: 1.7rem;
+            margin-bottom: 12px;
+            text-shadow: 0 0 10px #005a99;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7rem;
+        }
+
+        a {
+            color: #4db8ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #88d1ff;
+        }
+
+        .scan {
+            margin-top: 40px;
+            font-size: 1.1rem;
+            color: #32aaff;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- INTRO TEXT -->
+    <div class="intro-text">Who is Mr.Mythic_Killer?</div>
+
+    <!-- BUTTON -->
+    <button class="btn" onclick="showDetails()">See Details</button>
+
+    <!-- DETAILS SECTION -->
+    <div id="details">
+
+        <div class="card">
+            <div class="title">👑 Identity</div>
+            <p>
+                I am <strong>Mr.Mythic_Killer</strong>,  
+                a neon‑techy gamer + ethical‑vibes developer  
+                working in <strong>Minecraft, Discord Systems</strong>, and deep coding.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="title">💻 Skills</div>
+            <p>✔ 100% Expert in <strong>Python</strong> (automation, tools, scripts)</p>
+            <p>✔ <strong>Minecraft Plugin & Server Developer</strong></p>
+            <p>✔ <strong>Discord Bot Developer</strong> / API integrations</p>
+            <p>✔ Experienced in ethical‑style cyber knowledge</p>
+            <p>✔ Tech UI designer (neon + hacker style)</p>
+        </div>
+
+        <div class="card">
+            <div class="title">🌐 Social</div>
+            <p>Discord Username: <strong>mr.mythic_killer</strong></p>
+            <p>YouTube: <a href="#">Coming Soon</a></p>
+            <p>TikTok: <a href="#">Coming Soon</a></p>
+        </div>
+
+        <div class="card">
+            <div class="title">📌 Purpose of This Page</div>
+            <p>
+                This webpage exists so when anyone searches  
+                <strong>"Who is Mr.Mythic_Killer?"</strong>  
+                → this official identity appears instantly.
+            </p>
+        </div>
+
+        <p class="scan">[ ACCESS GRANTED ✔ IDENTITY VERIFIED ]</p>
+
+    </div>
+
+<script>
+    function showDetails() {
+        document.getElementById("details").style.display = "block";
+        window.scrollTo({ top: 500, behavior: "smooth" });
+    }
+</script>
+
+</body>
+</html>
